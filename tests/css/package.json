@@ -1,0 +1,18 @@
+{
+  "name": "rocketchat-cssstats",
+  "version": "0.0.1",
+  "description": "Generate CSS statistics for Rocket.Chat UI",
+  "bin": {
+    "stats": "bin/stats.js"
+  },
+  "author": "Tim Kinnane <tim@nestedcode.com>",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "cssstats": "^3.0.0-beta.1"
+  },
+  "scripts": {
+    "stats": "node stats.js"
+  }
+}
