@@ -298,6 +298,7 @@ blockquote:before {
 		}
 	}
 	&.new-day::before {
+		color: @info-font-color;
 		background-color: @content-background-color;
 	}
 	&.new-day::after,
@@ -428,16 +429,15 @@ a:hover {
 /** ----------------------------------------------------------------------------
  * Flex tabs / admin fly-out panels
  */
-.flex-tab {
+.flex-tab,
+.flex-tab .content,
+.flex-tab .content .animated {
 	background-color: @secondary-background-color;
-	.content {
+}
+.flex-tab .message {
+	background-color: @transparent-lighter;
+	&.new-day::before {
 		background-color: @secondary-background-color;
-	}
-	.message {
-		background-color: @transparent-lighter;
-		&.new-day::before {
-			background-color: @secondary-background-color;
-		}
 	}
 }
 .flex-tab-bar {
@@ -632,11 +632,17 @@ i.status-offline {
 	color: @pending-color;
 	background-color: @pending-background;
 	border-color: @pending-border;
+	a, a:hover {
+		color: @pending-color;
+	}
 }
 .alert-danger {
 	color: @error-color;
 	background-color: @error-background;
 	border-color: @error-border;
+	a, a:hover {
+		color: @error-color;
+	}
 }
 .side-nav .input-error,
 label.required:after {
